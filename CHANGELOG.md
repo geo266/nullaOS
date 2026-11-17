@@ -36,7 +36,6 @@ a commercial pod it still names the *programme* because it reads
 See the previous entry — `_live_tick` no longer waits for `_cover_pending`,
 `next_after()` has a 50 ms epsilon, and a join with less than 2 s left skips to
 the next airing instead of showing one frame.
-
 **Tests:** 42 timeline tests (incl. `TickLoopTests`: join offset never exceeds
 3 s over 40 simulated minutes), 8 display, 12 cover, 19 window, 15 playlist,
 11 probe, and **41/41** offscreen `MainWindow` checks — now including the banner:
@@ -45,6 +44,14 @@ content (number/title/times), paint-over-picture, and `I` toggling.
 for 90 simulated minutes: 61 airings, offset constant, zero problems.
 First banner paint: **6.3 ms** (the 6 s stall in the WIP handover was a harness
 artefact — no font warm-up needed).
+
+### 3. Smaller: a repository checkout starts on the mock catalog again
+
+The project-local `catalog/` was auto-detected whenever the folder held *any*
+entry. The repository ships `catalog/README.md` (and nothing else), so a fresh
+clone counted that as a real catalog, found zero channels and sat there. The
+autodetect now requires at least one channel **folder**, so a clone falls back to
+the mock catalog and prints the "generate test patterns" guidance instead.
 
 ## v0.7.6 — commercials know their length (and stop restarting)
 
