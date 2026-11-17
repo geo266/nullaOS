@@ -195,6 +195,9 @@ The full development log — every bug, its cause and the fix — is in
 [CHANGELOG.md](CHANGELOG.md). A shorter narrative of the builds and what comes
 next is in [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md).
 
+What is planned, and in which two-week iteration, lives on the
+[project board](https://github.com/users/geo266/projects/2).
+
 ## Credits
 
 * [python-vlc](https://github.com/oaubert/python-vlc) and VLC.
