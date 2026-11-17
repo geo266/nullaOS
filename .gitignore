@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Per-install state — never shared, never committed
+settings.json
+window_state.json
+schedule_state.json
+display_overrides.json
+duration_cache.json
+*.log
+
+# The catalogue is yours, not the repository's. Keep the README, drop the media.
+catalog/*
+!catalog/README.md
+
+# Generated test patterns
+assets/mock/videos/*.mp4
+assets/mock/commercials/*.mp4
+assets/mock/library/**/*.mp4
+
+# OS noise
+Thumbs.db
+desktop.ini
+.DS_Store

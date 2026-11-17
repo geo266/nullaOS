@@ -1,0 +1,25 @@
+# nullaOS — CRT media explorer + TV simulator
+# Python dependencies for Windows 11 + python-vlc + PySide6 path
+#
+# Install on the target Windows machine (the one driving the Aiwa VX-D2120):
+#   pip install -r requirements.txt
+#
+# PREREQUISITES:
+# 1. VLC Media Player installed (https://www.videolan.org/)
+#    - python-vlc is a thin wrapper around libvlc.dll, so the actual VLC
+#      install must be present at: C:\Program Files\VideoLAN\VLC\libvlc.dll
+# 2. Python 3.10+ from python.org (check "Add Python to PATH" during install)
+# 3. Your Aiwa VX-D2120 connected as a secondary display at 720x480 @ 60Hz
+#    interlaced (use CRTEmu-driver if your GPU doesn't expose 480i natively).
+# 4. (Optional) An Xbox/PlayStation/Switch gamepad paired via Bluetooth or USB
+#    for D-pad + A/B/Start navigation. Keyboard arrows also work as fallback.
+#
+# Version pins are deliberately loose (>=) so pip picks the latest
+# compatible version for your Python install. If you're on a very new
+# Python (3.13+), pip will automatically select PySide6 6.11+ or 6.12+.
+
+PySide6>=6.7
+python-vlc>=3.0.21203
+pygame-ce>=2.5
+numpy>=1.26           # optional but recommended — enables glow halos on selected cells
+                      # If not installed, app still works; selected cells just lack the soft halo.

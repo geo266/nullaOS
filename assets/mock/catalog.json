@@ -1,0 +1,118 @@
+{
+  "_comment": "nullaOS mock catalog v3 — matches prototype's CH/LIB/MENU/DESC arrays. Each channel has thumb (assets/ui/thumb_<n>.png) and desc (picker description). Per-channel commercials: Japanese channel uses Japanese ads ONLY (strict isolation). Library items have a 'kind' field: 'm' = movie (green ellipse indicator in Browser), 's' = show (gold square indicator). Dates are mock 'added-on' values matching the prototype.",
+  "root": "MockTV/",
+  "channels": [
+    {
+      "id": "ch-moviewave",
+      "number": 2,
+      "name": "MOVIEWAVE",
+      "abbrev": "MWV",
+      "color": "#FF9A5A",
+      "logo": "assets/mock/logos/moviewave.png",
+      "thumb": "assets/ui/thumb_0.png",
+      "desc": "Movies and trailers. US ads only.",
+      "deinterlace": "ivtc",
+      "aspect": "4:3",
+      "videos": [
+        { "id": "mwv-v1", "title": "Breaker Night",     "src": "assets/mock/videos/moviewave/ep1.mp4", "duration": 5760 },
+        { "id": "mwv-v2", "title": "Lazer Dogs",        "src": "assets/mock/videos/moviewave/ep2.mp4", "duration": 3600 }
+      ],
+      "commercials": [
+        { "id": "mwv-c1", "title": "USA: Coke Ad",     "src": "assets/mock/commercials/moviewave/ad1.mp4", "duration": 30 },
+        { "id": "mwv-c2", "title": "USA: Cereal Ad",   "src": "assets/mock/commercials/moviewave/ad2.mp4", "duration": 15 },
+        { "id": "mwv-c3", "title": "USA: Car Ad",       "src": "assets/mock/commercials/moviewave/ad3.mp4", "duration": 30 }
+      ]
+    },
+    {
+      "id": "ch-jptv",
+      "number": 3,
+      "name": "JP TV",
+      "abbrev": "JPT",
+      "color": "#FF0066",
+      "logo": "assets/mock/logos/jptv.png",
+      "thumb": "assets/ui/thumb_1.png",
+      "desc": "Anime, 24 hours. Japanese ads only.",
+      "deinterlace": "yadif2x",
+      "aspect": "4:3",
+      "videos": [
+        { "id": "jpt-v1", "title": "Anime Ep 1",      "src": "assets/mock/videos/jptv/ep1.mp4", "duration": 1440 },
+        { "id": "jpt-v2", "title": "Showa Hits",      "src": "assets/mock/videos/jptv/ep2.mp4", "duration": 1440 },
+        { "id": "jpt-v3", "title": "Night Drama",     "src": "assets/mock/videos/jptv/ep3.mp4", "duration": 1440 }
+      ],
+      "commercials": [
+        { "id": "jpt-c1", "title": "JP: Suntory",     "src": "assets/mock/commercials/jptv/ad1.mp4", "duration": 30 },
+        { "id": "jpt-c2", "title": "JP: SoftBank",    "src": "assets/mock/commercials/jptv/ad2.mp4", "duration": 30 },
+        { "id": "jpt-c3", "title": "JP: Uniqlo",       "src": "assets/mock/commercials/jptv/ad3.mp4", "duration": 15 }
+      ]
+    },
+    {
+      "id": "ch-sitcom24",
+      "number": 4,
+      "name": "SITCOM 24",
+      "abbrev": "SIT",
+      "color": "#3FA9F5",
+      "logo": "assets/mock/logos/sitcom24.png",
+      "thumb": "assets/ui/thumb_2.png",
+      "desc": "Sitcom reruns. US ads only.",
+      "deinterlace": "none",
+      "aspect": "4:3",
+      "videos": [
+        { "id": "sit-v1", "title": "Neighbors",        "src": "assets/mock/videos/sitcom24/ep1.mp4", "duration": 1320 },
+        { "id": "sit-v2", "title": "Bad Ice",           "src": "assets/mock/videos/sitcom24/ep2.mp4", "duration": 2640 }
+      ],
+      "commercials": [
+        { "id": "sit-c1", "title": "USA: Snack Ad",    "src": "assets/mock/commercials/sitcom24/ad1.mp4", "duration": 30 },
+        { "id": "sit-c2", "title": "USA: Bank Ad",      "src": "assets/mock/commercials/sitcom24/ad2.mp4", "duration": 30 }
+      ]
+    },
+    {
+      "id": "ch-publicaccess",
+      "number": 5,
+      "name": "PUBLIC ACCESS",
+      "abbrev": "PAC",
+      "color": "#5CFF3A",
+      "logo": "assets/mock/logos/publicaccess.png",
+      "thumb": "assets/ui/thumb_3.png",
+      "desc": "Local tapes. No ads.",
+      "deinterlace": "yadif2x",
+      "aspect": "4:3",
+      "videos": [
+        { "id": "pac-v1", "title": "Community Hour",   "src": "assets/mock/videos/publicaccess/ep1.mp4", "duration": 3600 }
+      ],
+      "commercials": []
+    }
+  ],
+  "library": {
+    "_comment": "On-demand library for Browser mode. No commercial injection. 'kind' = 'm' (movie, green ellipse) or 's' (show, gold square). 'added_day' = weekday string, 'added_date' = MM/DD. 'cover' = optional path to a poster PNG for the Browser row thumbnail (drop cover PNGs at assets/mock/library/covers/<id>.png).",
+    "movies": [
+      { "id": "lib-m-bbb",     "title": "Big Buck Bunny",         "src": "assets/mock/library/movies/big_buck_bunny.mp4",   "duration": 596,  "kind": "m", "added_day": "Fri", "added_date": "10/23", "cover": "assets/mock/library/covers/big_buck_bunny.png" },
+      { "id": "lib-m-lepus",   "title": "Night of the Lepus",    "src": "assets/mock/library/movies/night_of_the_lepus.mp4", "duration": 5280, "kind": "m", "added_day": "Mon", "added_date": "10/19", "cover": "assets/mock/library/covers/night_of_the_lepus.png" },
+      { "id": "lib-m-tape4",   "title": "Public Access Tape 4",  "src": "assets/mock/library/movies/public_access_tape_4.mp4", "duration": 3600, "kind": "m", "added_day": "Sun", "added_date": "10/18", "cover": "assets/mock/library/covers/public_access_tape_4.png" },
+      { "id": "lib-m-test",    "title": "Test Pattern",           "src": "assets/mock/library/movies/test_pattern.mp4",     "duration": 60,   "kind": "m", "added_day": "Sat", "added_date": "10/17" }
+    ],
+    "shows": [
+      {
+        "id": "lib-s-seinfeld",
+        "title": "Seinfeld",
+        "added_day": "Wed",
+        "added_date": "10/21",
+        "cover": "assets/mock/library/covers/seinfeld.png",
+        "episodes": [
+          { "id": "lib-s-seinfeld-1", "title": "S01E01", "src": "assets/mock/library/shows/seinfeld/s01e01.mp4", "duration": 1320, "kind": "s" },
+          { "id": "lib-s-seinfeld-2", "title": "S01E02", "src": "assets/mock/library/shows/seinfeld/s01e02.mp4", "duration": 1320, "kind": "s" }
+        ]
+      },
+      {
+        "id": "lib-s-office",
+        "title": "The Office",
+        "added_day": "Wed",
+        "added_date": "10/21",
+        "cover": "assets/mock/library/covers/the_office.png",
+        "episodes": [
+          { "id": "lib-s-office-1", "title": "S01E01", "src": "assets/mock/library/shows/the_office/s01e01.mp4", "duration": 1320, "kind": "s" },
+          { "id": "lib-s-office-2", "title": "S01E02", "src": "assets/mock/library/shows/the_office/s01e02.mp4", "duration": 1320, "kind": "s" }
+        ]
+      }
+    ]
+  }
+}
